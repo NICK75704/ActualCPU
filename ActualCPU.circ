@@ -56,9 +56,12 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(1450,470)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
+    <comp lib="0" loc="(130,460)" name="Pull Resistor">
+      <a name="pull" val="1"/>
+    </comp>
+    <comp lib="0" loc="(30,450)" name="Clock"/>
+    <comp lib="0" loc="(30,450)" name="Tunnel">
+      <a name="label" val="Clock"/>
     </comp>
     <comp lib="0" loc="(350,540)" name="Splitter">
       <a name="fanout" val="8"/>
@@ -70,6 +73,14 @@
     </comp>
     <comp lib="0" loc="(470,850)" name="Pull Resistor"/>
     <comp lib="0" loc="(470,850)" name="Transistor"/>
+    <comp lib="0" loc="(480,1050)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Clock"/>
+    </comp>
+    <comp lib="0" loc="(50,500)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Halt"/>
+    </comp>
     <comp lib="0" loc="(510,860)" name="Pull Resistor"/>
     <comp lib="0" loc="(510,860)" name="Transistor"/>
     <comp lib="0" loc="(550,870)" name="Pull Resistor"/>
@@ -99,8 +110,7 @@
     <comp lib="0" loc="(710,910)" name="Transistor"/>
     <comp lib="0" loc="(750,920)" name="Pull Resistor"/>
     <comp lib="0" loc="(750,920)" name="Transistor"/>
-    <comp lib="0" loc="(80,450)" name="Clock"/>
-    <comp lib="1" loc="(1290,470)" name="PLA">
+    <comp lib="1" loc="(1090,470)" name="PLA">
       <a name="in_width" val="8"/>
       <a name="label" val="MICROCODE"/>
       <a name="out_width" val="16"/>
@@ -117,6 +127,9 @@
       <a name="facing" val="south"/>
       <a name="size" val="30"/>
     </comp>
+    <comp lib="1" loc="(410,530)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
     <comp lib="4" loc="(1080,540)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="JMP"/>
@@ -125,7 +138,7 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="A"/>
     </comp>
-    <comp lib="4" loc="(1080,830)" name="Register">
+    <comp lib="4" loc="(1080,800)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="B"/>
     </comp>
@@ -135,10 +148,6 @@
 1 aa
 </a>
       <a name="label" val="MAIN"/>
-    </comp>
-    <comp lib="4" loc="(1230,690)" name="Counter">
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="Program_Counter"/>
     </comp>
     <comp lib="4" loc="(150,430)" name="Counter">
       <a name="appearance" val="logisim_evolution"/>
@@ -157,33 +166,33 @@
     <comp lib="8" loc="(881,722)" name="Text">
       <a name="text" val="RAM OUT"/>
     </comp>
-    <wire from="(1060,470)" to="(1060,700)"/>
-    <wire from="(1060,470)" to="(1290,470)"/>
-    <wire from="(1060,700)" to="(1060,860)"/>
+    <wire from="(1060,470)" to="(1060,570)"/>
+    <wire from="(1060,470)" to="(1090,470)"/>
+    <wire from="(1060,570)" to="(1060,700)"/>
+    <wire from="(1060,570)" to="(1080,570)"/>
+    <wire from="(1060,700)" to="(1060,830)"/>
     <wire from="(1060,700)" to="(1080,700)"/>
-    <wire from="(1060,860)" to="(1080,860)"/>
+    <wire from="(1060,830)" to="(1080,830)"/>
     <wire from="(120,1100)" to="(370,1100)"/>
     <wire from="(120,860)" to="(120,880)"/>
     <wire from="(120,860)" to="(340,860)"/>
     <wire from="(120,880)" to="(120,1100)"/>
-    <wire from="(1340,470)" to="(1450,470)"/>
-    <wire from="(340,540)" to="(340,570)"/>
+    <wire from="(130,460)" to="(130,500)"/>
+    <wire from="(130,500)" to="(150,500)"/>
+    <wire from="(340,540)" to="(340,860)"/>
     <wire from="(340,540)" to="(350,540)"/>
-    <wire from="(340,570)" to="(1080,570)"/>
-    <wire from="(340,570)" to="(340,860)"/>
     <wire from="(360,930)" to="(410,930)"/>
     <wire from="(370,520)" to="(380,520)"/>
     <wire from="(370,530)" to="(370,880)"/>
-    <wire from="(370,530)" to="(450,530)"/>
+    <wire from="(370,530)" to="(390,530)"/>
     <wire from="(370,980)" to="(370,1100)"/>
     <wire from="(370,980)" to="(490,980)"/>
     <wire from="(380,1030)" to="(490,1030)"/>
-    <wire from="(380,1040)" to="(380,1210)"/>
-    <wire from="(380,1040)" to="(490,1040)"/>
     <wire from="(380,520)" to="(380,830)"/>
     <wire from="(380,850)" to="(390,850)"/>
     <wire from="(380,910)" to="(380,1030)"/>
     <wire from="(390,850)" to="(390,880)"/>
+    <wire from="(410,530)" to="(450,530)"/>
     <wire from="(430,860)" to="(470,860)"/>
     <wire from="(430,870)" to="(510,870)"/>
     <wire from="(430,880)" to="(550,880)"/>
@@ -196,8 +205,11 @@
     <wire from="(450,800)" to="(490,800)"/>
     <wire from="(470,760)" to="(470,850)"/>
     <wire from="(470,760)" to="(530,760)"/>
+    <wire from="(480,1050)" to="(490,1050)"/>
+    <wire from="(490,1040)" to="(490,1050)"/>
     <wire from="(490,800)" to="(490,840)"/>
     <wire from="(490,800)" to="(530,800)"/>
+    <wire from="(50,500)" to="(130,500)"/>
     <wire from="(510,770)" to="(510,860)"/>
     <wire from="(510,770)" to="(540,770)"/>
     <wire from="(530,750)" to="(530,760)"/>
@@ -231,11 +243,16 @@
     <wire from="(730,800)" to="(730,900)"/>
     <wire from="(740,1060)" to="(830,1060)"/>
     <wire from="(750,750)" to="(750,920)"/>
-    <wire from="(80,1210)" to="(380,1210)"/>
-    <wire from="(80,450)" to="(80,510)"/>
-    <wire from="(80,510)" to="(150,510)"/>
-    <wire from="(80,510)" to="(80,1210)"/>
     <wire from="(830,700)" to="(1060,700)"/>
     <wire from="(830,700)" to="(830,1060)"/>
+  </circuit>
+  <circuit name="program_counter">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="program_counter"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="4" loc="(410,220)" name="Counter">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
   </circuit>
 </project>
