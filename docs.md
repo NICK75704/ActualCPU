@@ -2,19 +2,20 @@
 | ---------------------------- | --------------------------- | --------- |
 | read next byte               | RNB (read next byte)        | 0         |
 | read address to jump to      | RAJ (read address jump)     | 1         |
-| store current address to RAM | SAS (store address stack)   |           |
-| jump to address              | JPA (jump address)          |           |
-| read from address            | RDA (read address)          |           |
-| return from address          | RFA (return from address)   |           |
-| load to A                    | LTA (load to A)             |           |
-| store A to bus               | SAB                         |           |
+| store current address to RAM | SAS (store address stack)   | 2         |
+| jump to address              | JPA (jump address)          | 3         |
+| read from address            | RDA (read address)          | 4         |
+| load to A                    | LTA (load to A)             | 5         |
+| load to B                    | LTB (load to B)             | 6         |
+| return from address          | RFA (return from address)   | 7         |
+| store A to bus               | SAB                         | 8         |
+| store B to bus               | SBB                         | 9         |
+| compare A and B              | CAB (compare A B)           | 10        |
+| RAM write enable             | RWE (ram write enable)      | 11        |
+| RAM write disable            | RWD (ram write disable)     | 12        |
 |                              |                             |           |
-| load to B                    | LTB (load to B)             |           |
-| store B to bus               | SBB                         |           |
-| compare A and B              | CAB (compare A B)           |           |
-| move to next instruction     | MNI (move next instruction) |           |
-| RAM write enable             | RWE (ram write enable)      |           |
-| RAM write disable            | RWD (ram write disable)     |           |
+|                              |                             |           |
+| move to next instruction     | MNI (move next instruction) | 15        |
 
 
 
