@@ -1,19 +1,20 @@
-| Mini Instruction             | Shortcut Term               |
-| ---------------------------- | --------------------------- |
-| read address to jump to      | RAJ (read address jump)     |
-| store current address to RAM | SAS (store address stack)   |
-| jump to address              | JPA (jump address)          |
-| read from address            | RDA (read address)          |
-| return from address          | RFA (return from address)   |
-| read next byte               | RNB (read next byte)        |
-| load to A                    | LTA (load to A)             |
-| store A to bus               | SAB                         |
-| load to B                    | LTB (load to B)             |
-| store B to bus               | SBB                         |
-| compare A and B              | CAB (compare A B)           |
-| move to next instruction     | MNI (move next instruction) |
-| RAM write enable             | RWE (ram write enable)      |
-| RAM write disable            | RWD (ram write disable)     |
+| Mini Instruction             | Shortcut Term               | PLA Place |
+| ---------------------------- | --------------------------- | --------- |
+| read next byte               | RNB (read next byte)        | 0         |
+| read address to jump to      | RAJ (read address jump)     | 1         |
+| store current address to RAM | SAS (store address stack)   |           |
+| jump to address              | JPA (jump address)          |           |
+| read from address            | RDA (read address)          |           |
+| return from address          | RFA (return from address)   |           |
+| load to A                    | LTA (load to A)             |           |
+| store A to bus               | SAB                         |           |
+|                              |                             |           |
+| load to B                    | LTB (load to B)             |           |
+| store B to bus               | SBB                         |           |
+| compare A and B              | CAB (compare A B)           |           |
+| move to next instruction     | MNI (move next instruction) |           |
+| RAM write enable             | RWE (ram write enable)      |           |
+| RAM write disable            | RWD (ram write disable)     |           |
 
 
 
